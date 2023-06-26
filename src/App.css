@@ -1,38 +1,140 @@
 .App {
   text-align: center;
+  width: 1000;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1280px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  background-color: #dedede;
+  justify-content: space-between;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+h1 {
+  margin: 5px;
+  padding: 4px;
+  width: auto;
+  height: 2rem;
+  font-size: 1.8rem;
+}
+
+.button-like {
+  border: 1px solid #333;
+  margin: 5px;
+  padding: 4px;
+  width: 180px;
+  height: 2rem;
+  text-align: center;
+  background-color: #585f5f;
   color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.button-like:hover {
+  opacity: 0.8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dialog {
+  width: 950px;
+  height: 650px;
+  padding: 15px;
+}
+
+.dialog .operation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dialog input {
+  font-size: 1.2rem;
+  height: 1.8rem;
+  width: 500px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  display: block;
+}
+
+.dialog input::placeholder {
+  color: lightgray;
+}
+
+.dialog .search-results {
+  height: 500px;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.playlist-row {
+  background-color: #bee2f0;
+  display: flex;
+  flex-direction: row;
+}
+
+.playlist-row:nth-child(even) {
+  background-color: #c4eee6;
+}
+
+.playlist-row div {
+  height: 1.0rem;
+  padding: 1.0rem;
+  font-size: 1.0rem;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.playlist-row div.title {
+  width: 350px;
+}
+
+.playlist-row div.authors {
+  width: 280px;
+}
+
+.playlist-row input {
+  width: 450px;
+  padding: 15px 2px 0;
+  background-color: #bee2f0;
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid black;
+}
+
+.playlist-row:nth-child(even) input {
+  background-color: #c4eee6;
+}
+
+.playlist-row input:focus {
+  border-bottom: 3px solid black;
+  font-size: 1.1rem;
+}
+
+.playlist-row .delete-row {
+  margin: 10px 15px 10px;
+  padding: 4px;
+  width: 100px;
+  height: 1.6rem;
+  text-align: left;
+  color: white;
+  background-color: #585f5f;
+  cursor: pointer;
+}
+
+.playlist-row .delete-row:hover {
+  opacity: 0.8;
 }
